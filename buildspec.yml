@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo "Starting CodeBuild"
+      - docker --version
+
+  build:
+    commands:
+      - echo "Building Docker image"
+      - docker build -t tejendrapanwar1981/website:v1 .
+
+  post_build:
+    commands:
+      - echo "CodeBuild completed successfully"
+
+      
